@@ -1,3 +1,4 @@
+# This module provides functions for loading and inspecting movie datasets.
 from pathlib import Path
 
 import pandas as pd
@@ -37,11 +38,13 @@ def inspect_data(df: pd.DataFrame) -> None:
     Args:
         df: The DataFrame to inspect.
     """
+    # Display the dimensions of the dataset (number of rows and columns)
     print("=" * 60)
     print("SHAPE (rows, columns)")
     print("=" * 60)
     print(df.shape)
 
+    # List all column names in the dataset
     print("\n" + "=" * 60)
     print("COLUMNS")
     print("=" * 60)

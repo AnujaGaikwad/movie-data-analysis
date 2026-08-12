@@ -77,8 +77,4 @@ following fields:
 | `Worldwide Gross` | Total worldwide box office revenue |
 | `Year` | Release year |
 
-> Note: The raw dataset intentionally includes real-world data quality
-> issues (missing values, duplicate rows, inconsistent text casing, and
-> currency-formatted strings) so the cleaning stage of this project
-> reflects genuine data-wrangling work.
 

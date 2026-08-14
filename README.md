@@ -96,9 +96,6 @@ jupyter notebook notebooks/analysis.ipynb
 | Profitability vs. audience score scatter | `images/screenshot_scatter_chart.png` |
 
 ```markdown
-<!-- Example embed once you've added the real screenshots: -->
-![Dashboard Overview](images/screenshot_dashboard_overview.png)
-```
 
 ## 📁 Project Structure
 

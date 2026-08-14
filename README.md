@@ -1,7 +1,4 @@
 <!-- Banner placeholder — replace with a real banner image once created, e.g. via Canva -->
-<p align="center">
-  <img src="images/banner.png" alt="Movie Ratings Analysis Dashboard banner" width="100%">
-</p>
 
 <h1 align="center">🎬 Movie Ratings Analysis Dashboard</h1>
 

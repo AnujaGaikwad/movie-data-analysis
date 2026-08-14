@@ -185,5 +185,3 @@ This project is released under the [MIT License](LICENSE).
 
 <p align="center">Built as a data analytics  project.</p>
 ````
-
-You dropped the **"🔮 Future Improvements"** section entirely — that's fine if intentional (it's optional), but it's a small, easy signal in interviews ("here's what I'd do next with more time"). Want me to add it back in, or are you keeping the README lean on purpose?

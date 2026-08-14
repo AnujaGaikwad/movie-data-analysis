@@ -99,7 +99,7 @@ jupyter notebook notebooks/analysis.ipynb
 
 ## 📁 Project Structure
 
-```
+```markdown
 movie-ratings-analysis/
 │
 ├── data/

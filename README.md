@@ -167,17 +167,6 @@ movie-ratings-analysis/
 | 4 | Interactive Streamlit dashboard | ✅ |
 | 5 | Final documentation & GitHub release | ✅ |
 
-## 🔮 Future Improvements
-
-- [ ] Add a `budget` column and compute profitability directly instead of
-  using a pre-supplied ratio
-- [ ] Add automated tests (`pytest`) for `src/cleaning.py` and `src/analysis.py`
-- [ ] Deploy the dashboard publicly (Streamlit Community Cloud)
-- [ ] Add a genre-level or studio-level drill-down page
-- [ ] Add year-over-year trend lines for audience/critic scores
-- [ ] Integrate a real-world dataset (e.g. via an API) instead of a
-  synthetic one, with appropriate licensing/attribution
-
 ## 🤝 Contributing
 
 Contributions are welcome! To contribute:
@@ -193,15 +182,7 @@ docstrings, and PEP8 formatting (checked with `flake8`).
 ## 📄 Requirements
 
 See [`requirements.txt`](requirements.txt):
-```
-pandas>=2.0.0
-numpy>=1.24.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-plotly>=5.18.0
-streamlit>=1.32.0
-jupyter>=1.0.0
-```
+
 
 ## 📜 License
 

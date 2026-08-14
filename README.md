@@ -1,70 +1,132 @@
-# 🎬 Movie Ratings Analysis Dashboard
 
-A end-to-end Data Analytics portfolio project exploring movie performance
-across audience scores, critic ratings (Rotten Tomatoes), studio, genre,
-profitability, and box office gross — built with Python, Pandas, and an
-interactive Streamlit dashboard.
+<h1 align="center">🎬 Movie Ratings Analysis Dashboard</h1>
 
-> 🚧 **Project status:** In progress — being built and documented day by day.
+<p align="center">
+  An end-to-end data analytics project exploring movie performance —
+  audience scores, critic ratings, profitability, and box office gross —
+  from raw CSV to an interactive Streamlit dashboard.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python 3.10+">
+  <img src="https://img.shields.io/badge/status-complete-brightgreen" alt="Status: complete">
+  <img src="https://img.shields.io/badge/license-MIT-lightgrey" alt="License: MIT">
+</p>
 
 ---
 
-## 📌 Project Overview
+## 📌 Overview
 
-This project simulates a real-world data analyst workflow:
+This project follows a complete, real-world data analyst workflow:
 
-1. Load and explore a raw, messy dataset
-2. Clean and preprocess it into an analysis-ready format
-3. Perform exploratory data analysis (EDA) with visualizations
-4. Build an interactive Streamlit dashboard for stakeholders
-5. Polish the repository into a professional, interview-ready portfolio piece
+1. **Load & explore** a raw, messy movies dataset
+2. **Clean & preprocess** it into an analysis-ready format
+3. **Explore** the data visually (EDA) and surface real insights
+4. **Build** an interactive Streamlit dashboard for stakeholders
+5. **Document & polish** the repository into an interview-ready portfolio piece
+
+## ✨ Features
+
+- 🧹 **Reproducible cleaning pipeline** — missing values, duplicates, wrong
+  dtypes, and currency strings handled with modular, tested functions
+- 📊 **7 exploratory charts** — genre distribution, score distributions,
+  gross by genre, profitability vs. audience score, correlation heatmap,
+  and year-wise release trends, each saved as PNG and documented
+- 🖥️ **Interactive dashboard** — live KPI cards, genre/year filters, and
+  4 Plotly charts (pie, bar, histogram, scatter) that update instantly
+- 📓 **Companion Jupyter notebook** mirroring the full analysis, cell by cell
+- 🗂️ **Clean, modular codebase** — type hints, docstrings, PEP8-compliant,
+  organized into single-responsibility modules under `src/`
 
 ## 🧰 Tech Stack
 
-| Tool | Purpose |
+| Category | Tools |
 |---|---|
-| Python | Core language |
-| Pandas / NumPy | Data manipulation & analysis |
-| Matplotlib / Seaborn | Static exploratory visualizations |
-| Plotly | Interactive charts |
-| Streamlit | Interactive dashboard |
-| Git | Version control |
-| Markdown | Documentation |
+| Language | Python 3.10+ |
+| Data manipulation | Pandas, NumPy |
+| Static visualization | Matplotlib, Seaborn |
+| Interactive visualization | Plotly |
+| Dashboard | Streamlit |
+| Version control | Git / GitHub |
+| Documentation | Markdown, Jupyter |
+
+## 🚀 Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/<your-username>/movie-ratings-analysis.git
+cd movie-ratings-analysis
+
+# 2. Create a virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate      # Windows: venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+```
+
+## ▶️ Usage
+
+```bash
+# Run the full data pipeline: load → clean → analyze → generate charts
+python main.py
+
+# Launch the interactive dashboard
+streamlit run dashboard/app.py
+```
+
+Optionally, explore the analysis step-by-step in Jupyter:
+```bash
+jupyter notebook notebooks/analysis.ipynb
+```
+
+## 🖼️ Screenshots
+
+> Screenshots below are placeholders — replace each with a real capture of
+> your running dashboard (`streamlit run dashboard/app.py`, then screenshot
+> your browser window) before publishing.
+
+| Screenshot | File |
+|---|---|
+| Dashboard overview (KPIs + all charts) | `images/screenshot_dashboard_overview.png` |
+| Sidebar filters in use (genre + year) | `images/screenshot_dashboard_filters.png` |
+| KPI cards close-up | `images/screenshot_kpi_cards.png` |
+| Genre share pie chart | `images/screenshot_genre_pie_chart.png` |
+| Profitability vs. audience score scatter | `images/screenshot_scatter_chart.png` |
 
 ## 📁 Project Structure
 
-```
+```text
 movie-ratings-analysis/
 │
-├── data/                 # Raw and cleaned datasets
-│   └── movies.csv
+├── data/
+│   ├── movies.csv               # Raw dataset
+│   └── movies_cleaned.csv       # Cleaned, analysis-ready dataset
 │
-├── dashboard/             # Streamlit dashboard app
-│   └── app.py
+├── dashboard/
+│   └── app.py                   # Streamlit dashboard
 │
-├── images/                # Saved charts from EDA
+├── images/                      # Saved EDA charts + screenshots
 │
-├── notebooks/              # Jupyter notebooks for exploration
-│   └── analysis.ipynb
+├── notebooks/
+│   └── analysis.ipynb           # Step-by-step exploration notebook
 │
-├── src/                   # Reusable, modular source code
-│   ├── data_loader.py
-│   ├── cleaning.py
-│   ├── visualization.py
-│   └── analysis.py
+├── src/
+│   ├── data_loader.py           # Load + inspect data
+│   ├── cleaning.py              # Cleaning pipeline
+│   ├── visualization.py         # Chart-generation functions
+│   └── analysis.py              # KPIs, correlations, aggregations
 │
-├── outputs/                # Generated analysis outputs
+├── outputs/                     # Reserved for exported reports/results
 │
 ├── requirements.txt
 ├── README.md
+├── LICENSE
 ├── .gitignore
-└── main.py
+└── main.py                      # Pipeline entry point
 ```
 
 ## 📊 Dataset
-
-The dataset (`data/movies.csv`) contains one row per film with the
-following fields:
 
 | Column | Description |
 |---|---|
@@ -77,4 +139,49 @@ following fields:
 | `Worldwide Gross` | Total worldwide box office revenue |
 | `Year` | Release year |
 
+## 🔍 Key Insights
 
+- Profitability shows **almost no correlation** with audience score or
+  critic score (r ≈ 0.00) — a well-loved film isn't necessarily a
+  profitable one, and vice versa.
+- **Action, Romance, and Horror** lead in average worldwide gross;
+  Documentary and Fantasy trail.
+- Audience scores and critic scores are both roughly bell-shaped, with
+  critics slightly more spread out and marginally harsher on average.
+- Release volume fluctuates year to year with no strong long-term trend
+  across the 2007-2023 window covered by this dataset.
+
+## 🗓️ Development Log
+
+| Day | Focus | Status |
+|---|---|---|
+| 1 | Project setup & dataset exploration | ✅ |
+| 2 | Data cleaning & preprocessing | ✅ |
+| 3 | Exploratory data analysis (7 charts) | ✅ |
+| 4 | Interactive Streamlit dashboard | ✅ |
+| 5 | Final documentation & GitHub release | ✅ |
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes with a clear message
+4. Push to your branch and open a Pull Request
+
+Please keep new code consistent with the existing style: type hints,
+docstrings, and PEP8 formatting (checked with `flake8`).
+
+## 📄 Requirements
+
+See [`requirements.txt`](requirements.txt) for the full dependency list.
+
+## 📜 License
+
+This project is released under the [MIT License](LICENSE).
+
+---
+
+<p align="center">Built as a data analytics  project.</p>
+````

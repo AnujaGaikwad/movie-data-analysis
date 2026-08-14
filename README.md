@@ -2,7 +2,7 @@
 <h1 align="center">🎬 Movie Ratings Analysis Dashboard</h1>
 
 <p align="center">
-  An end-to-end data analytics portfolio project exploring movie performance —
+  An end-to-end data analytics project exploring movie performance —
   audience scores, critic ratings, profitability, and box office gross —
   from raw CSV to an interactive Streamlit dashboard.
 </p>

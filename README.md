@@ -1,4 +1,3 @@
-<!-- Banner placeholder — replace with a real banner image once created, e.g. via Canva -->
 
 <h1 align="center">🎬 Movie Ratings Analysis Dashboard</h1>
 
@@ -95,8 +94,6 @@ jupyter notebook notebooks/analysis.ipynb
 | Genre share pie chart | `images/screenshot_genre_pie_chart.png` |
 | Profitability vs. audience score scatter | `images/screenshot_scatter_chart.png` |
 
-```markdown
-
 ## 📁 Project Structure
 
 ```text
@@ -127,7 +124,7 @@ movie-ratings-analysis/
 ├── LICENSE
 ├── .gitignore
 └── main.py                      # Pipeline entry point
-
+```
 
 ## 📊 Dataset
 
@@ -178,8 +175,7 @@ docstrings, and PEP8 formatting (checked with `flake8`).
 
 ## 📄 Requirements
 
-See [`requirements.txt`](requirements.txt):
-
+See [`requirements.txt`](requirements.txt) for the full dependency list.
 
 ## 📜 License
 
@@ -187,4 +183,8 @@ This project is released under the [MIT License](LICENSE).
 
 ---
 
-<p align="center">Built as a data analytics portfolio project.</p>
+<p align="center">Built as a data analytics  project.</p>
+````
+
+## One thing worth deciding
+You dropped the **"🔮 Future Improvements"** section entirely — that's fine if intentional (it's optional), but it's a small, easy signal in interviews ("here's what I'd do next with more time"). Want me to add it back in, or are you keeping the README lean on purpose?

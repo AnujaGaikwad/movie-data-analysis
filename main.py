@@ -18,7 +18,7 @@ def main() -> None:
     print(f"Loaded dataset with {df.shape[0]} rows and {df.shape[1]} columns.\n")
     inspect_data(df)
 
-    # --- Day 2: Clean the dataset and save the result ---
+    # ---  Clean the dataset and save the result ---
     print("\n" + "=" * 60)
     print("CLEANING DATASET")
     print("=" * 60)

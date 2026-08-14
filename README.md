@@ -99,7 +99,7 @@ jupyter notebook notebooks/analysis.ipynb
 
 ## 📁 Project Structure
 
-```markdown
+```text
 movie-ratings-analysis/
 │
 ├── data/
@@ -127,7 +127,7 @@ movie-ratings-analysis/
 ├── LICENSE
 ├── .gitignore
 └── main.py                      # Pipeline entry point
-```
+
 
 ## 📊 Dataset
 

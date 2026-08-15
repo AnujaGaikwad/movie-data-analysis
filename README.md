@@ -1,98 +1,169 @@
-
-<h1 align="center">🎬 Movie Ratings Analysis Dashboard</h1>
+# 🎬 Movie Ratings Analysis
 
 <p align="center">
-  An end-to-end data analytics project exploring movie performance —
-  audience scores, critic ratings, profitability, and box office gross —
-  from raw CSV to an interactive Streamlit dashboard.
+  <strong>An end-to-end Data Analytics project exploring movie ratings, profitability, studio performance, genre trends, and worldwide box office revenue.</strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python 3.10+">
-  <img src="https://img.shields.io/badge/status-complete-brightgreen" alt="Status: complete">
-  <img src="https://img.shields.io/badge/license-MIT-lightgrey" alt="License: MIT">
+  Built with Python, Pandas, NumPy, Matplotlib, Seaborn, Plotly, and Streamlit.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue" alt="Python">
+  <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458" alt="Pandas">
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Status-Complete-brightgreen" alt="Status">
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="License">
 </p>
 
 ---
 
-## 📌 Overview
+## 📌 Project Overview
 
-This project follows a complete, real-world data analyst workflow:
+This project demonstrates a complete **Data Analytics workflow**, starting with a raw movie dataset and ending with an interactive dashboard.
 
-1. **Load & explore** a raw, messy movies dataset
-2. **Clean & preprocess** it into an analysis-ready format
-3. **Explore** the data visually (EDA) and surface real insights
-4. **Build** an interactive Streamlit dashboard for stakeholders
-5. **Document & polish** the repository into an interview-ready portfolio piece
+### Workflow
 
-## ✨ Features
+**Raw Data → Data Cleaning → EDA → Analysis → Visualization → Interactive Dashboard → Business Insights**
 
-- 🧹 **Reproducible cleaning pipeline** — missing values, duplicates, wrong
-  dtypes, and currency strings handled with modular, tested functions
-- 📊 **7 exploratory charts** — genre distribution, score distributions,
-  gross by genre, profitability vs. audience score, correlation heatmap,
-  and year-wise release trends, each saved as PNG and documented
-- 🖥️ **Interactive dashboard** — live KPI cards, genre/year filters, and
-  4 Plotly charts (pie, bar, histogram, scatter) that update instantly
-- 📓 **Companion Jupyter notebook** mirroring the full analysis, cell by cell
-- 🗂️ **Clean, modular codebase** — type hints, docstrings, PEP8-compliant,
-  organized into single-responsibility modules under `src/`
+The analysis explores how **audience ratings, critic ratings, profitability, genre, studio, release year, and worldwide gross** relate to movie performance.
+
+---
+
+## ✨ Key Features
+
+* 🧹 **Data Cleaning & Preprocessing**
+
+  * Missing-value analysis
+  * Duplicate detection
+  * Data-type correction
+  * Currency and numeric-value cleaning
+  * Reproducible cleaning pipeline
+
+* 📊 **Exploratory Data Analysis**
+
+  * Genre distribution
+  * Audience score distribution
+  * Critic score distribution
+  * Worldwide gross by genre
+  * Profitability vs. audience score
+  * Correlation analysis
+  * Year-wise release trends
+
+* 🖥️ **Interactive Streamlit Dashboard**
+
+  * Dynamic KPI cards
+  * Genre filtering
+  * Year filtering
+  * Interactive Plotly charts
+  * Filter-dependent insights
+
+* 📈 **Business-Focused Analysis**
+
+  * Average profitability by studio
+  * Correlation between ratings and profitability
+  * Genre performance comparison
+  * Worldwide gross analysis
+  * Plain-language business takeaways
+
+* 📓 **Jupyter Notebook**
+
+  * Step-by-step exploration
+  * Data cleaning
+  * EDA
+  * Analysis and interpretation
+
+---
 
 ## 🧰 Tech Stack
 
-| Category | Tools |
-|---|---|
-| Language | Python 3.10+ |
-| Data manipulation | Pandas, NumPy |
-| Static visualization | Matplotlib, Seaborn |
-| Interactive visualization | Plotly |
-| Dashboard | Streamlit |
-| Version control | Git / GitHub |
-| Documentation | Markdown, Jupyter |
+| Category        | Tools                       |
+| --------------- | --------------------------- |
+| Programming     | Python                      |
+| Data Analysis   | Pandas, NumPy               |
+| Visualization   | Matplotlib, Seaborn, Plotly |
+| Dashboard       | Streamlit                   |
+| Development     | Jupyter Notebook, VS Code   |
+| Version Control | Git, GitHub                 |
+| Documentation   | Markdown                    |
 
-## 🚀 Installation
+---
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/<your-username>/movie-ratings-analysis.git
-cd movie-ratings-analysis
+## 📊 Dataset
 
-# 2. Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
+The dataset contains one row per film with information about ratings, profitability, studio, genre, release year, and worldwide revenue.
 
-# 3. Install dependencies
-pip install -r requirements.txt
-```
+| Column              | Description                      |
+| ------------------- | -------------------------------- |
+| `Film`              | Movie title                      |
+| `Genre`             | Primary movie genre              |
+| `Lead Studio`       | Studio associated with the movie |
+| `Audience Score %`  | Audience rating from 0–100       |
+| `Profitability`     | Gross-to-budget ratio            |
+| `Rotten Tomatoes %` | Critic score from 0–100          |
+| `Worldwide Gross`   | Worldwide box office revenue     |
+| `Year`              | Movie release year               |
 
-## ▶️ Usage
+---
 
-```bash
-# Run the full data pipeline: load → clean → analyze → generate charts
-python main.py
+## 🔍 Key Insights
 
-# Launch the interactive dashboard
-streamlit run dashboard/app.py
-```
+The analysis produced several notable findings:
 
-Optionally, explore the analysis step-by-step in Jupyter:
-```bash
-jupyter notebook notebooks/analysis.ipynb
-```
+* **Profitability has almost no correlation with audience score or critic score** in this dataset (`r ≈ 0.00`).
+* A highly rated movie is therefore **not necessarily a highly profitable movie**.
+* **Action, Romance, and Horror** show the highest average worldwide gross among the analyzed genres.
+* **Documentary and Fantasy** have comparatively lower average worldwide gross.
+* Audience and critic scores follow broadly similar distributions, although critic scores show slightly greater variation.
+* Movie release volume fluctuates across the analyzed years without a strong long-term trend.
 
-## 🖼️ Screenshots
+> **Important:** Correlation does not imply causation.
+> The analysis identifies relationships in the dataset, not proof that ratings directly cause profitability or revenue.
 
-> Screenshots below are placeholders — replace each with a real capture of
-> your running dashboard (`streamlit run dashboard/app.py`, then screenshot
-> your browser window) before publishing.
+---
 
-| Screenshot | File |
-|---|---|
-| Dashboard overview (KPIs + all charts) | `images/screenshot_dashboard_overview.png` |
-| Sidebar filters in use (genre + year) | `images/screenshot_dashboard_filters.png` |
-| KPI cards close-up | `images/screenshot_kpi_cards.png` |
-| Genre share pie chart | `images/screenshot_genre_pie_chart.png` |
-| Profitability vs. audience score scatter | `images/screenshot_scatter_chart.png` |
+## 📈 Dashboard
+
+The Streamlit dashboard provides an interactive way to explore the dataset.
+
+### Dashboard includes
+
+* **KPI Cards**
+
+  * Total movies
+  * Average audience score
+  * Average critic score
+  * Average profitability
+  * Total worldwide gross
+
+* **Interactive Charts**
+
+  * Genre distribution
+  * Worldwide gross by genre
+  * Score distributions
+  * Profitability vs. audience score
+  * Correlation analysis
+
+* **Filters**
+
+  * Genre
+  * Release year
+
+The insights update according to the selected filters.
+
+---
+
+## 🖼️ Dashboard Preview
+
+| Dashboard                                  | Analysis                         |
+| ------------------------------------------ | -------------------------------- |
+| `images/screenshot_dashboard_overview.png` | Dashboard overview               |
+| `images/screenshot_dashboard_filters.png`  | Genre and year filters           |
+| `images/screenshot_kpi_cards.png`          | KPI cards                        |
+| `images/screenshot_genre_pie_chart.png`    | Genre distribution               |
+| `images/screenshot_scatter_chart.png`      | Profitability vs. audience score |
+
+---
 
 ## 📁 Project Structure
 
@@ -100,88 +171,141 @@ jupyter notebook notebooks/analysis.ipynb
 movie-ratings-analysis/
 │
 ├── data/
-│   ├── movies.csv               # Raw dataset
-│   └── movies_cleaned.csv       # Cleaned, analysis-ready dataset
+│   ├── movies.csv
+│   └── movies_cleaned.csv
 │
 ├── dashboard/
-│   └── app.py                   # Streamlit dashboard
+│   └── app.py
 │
-├── images/                      # Saved EDA charts + screenshots
+├── images/
+│   ├── EDA charts
+│   └── dashboard screenshots
 │
 ├── notebooks/
-│   └── analysis.ipynb           # Step-by-step exploration notebook
+│   └── analysis.ipynb
 │
 ├── src/
-│   ├── data_loader.py           # Load + inspect data
-│   ├── cleaning.py              # Cleaning pipeline
-│   ├── visualization.py         # Chart-generation functions
-│   └── analysis.py              # KPIs, correlations, aggregations
+│   ├── data_loader.py
+│   ├── cleaning.py
+│   ├── visualization.py
+│   └── analysis.py
 │
-├── outputs/                     # Reserved for exported reports/results
+├── outputs/
 │
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
 ├── .gitignore
-└── main.py                      # Pipeline entry point
+└── main.py
 ```
-
-## 📊 Dataset
-
-| Column | Description |
-|---|---|
-| `Film` | Movie title |
-| `Genre` | Primary genre |
-| `Lead Studio` | Studio that led production |
-| `Audience Score %` | Audience rating (0-100) |
-| `Profitability` | Gross-to-budget ratio |
-| `Rotten Tomatoes %` | Critic score on Rotten Tomatoes (0-100) |
-| `Worldwide Gross` | Total worldwide box office revenue |
-| `Year` | Release year |
-
-## 🔍 Key Insights
-
-- Profitability shows **almost no correlation** with audience score or
-  critic score (r ≈ 0.00) — a well-loved film isn't necessarily a
-  profitable one, and vice versa.
-- **Action, Romance, and Horror** lead in average worldwide gross;
-  Documentary and Fantasy trail.
-- Audience scores and critic scores are both roughly bell-shaped, with
-  critics slightly more spread out and marginally harsher on average.
-- Release volume fluctuates year to year with no strong long-term trend
-  across the 2007-2023 window covered by this dataset.
-
-## 🗓️ Development Log
-
-| Day | Focus | Status |
-|---|---|---|
-| 1 | Project setup & dataset exploration | ✅ |
-| 2 | Data cleaning & preprocessing | ✅ |
-| 3 | Exploratory data analysis (7 charts) | ✅ |
-| 4 | Interactive Streamlit dashboard | ✅ |
-| 5 | Final documentation & GitHub release | ✅ |
-
-## 🤝 Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes with a clear message
-4. Push to your branch and open a Pull Request
-
-Please keep new code consistent with the existing style: type hints,
-docstrings, and PEP8 formatting (checked with `flake8`).
-
-## 📄 Requirements
-
-See [`requirements.txt`](requirements.txt) for the full dependency list.
-
-## 📜 License
-
-This project is released under the [MIT License](LICENSE).
 
 ---
 
-<p align="center">Built as a data analytics  project.</p>
-````
+## 🚀 Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/<your-username>/movie-ratings-analysis.git
+cd movie-ratings-analysis
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 3. Activate the environment
+
+**Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS:**
+
+```bash
+source venv/bin/activate
+```
+
+### 4. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Run the Project
+
+### Run the data pipeline
+
+```bash
+python main.py
+```
+
+This performs the project workflow:
+
+```text
+Load → Clean → Analyze → Generate Visualizations
+```
+
+### Launch the Streamlit dashboard
+
+```bash
+streamlit run dashboard/app.py
+```
+
+### Explore the notebook
+
+```bash
+jupyter notebook notebooks/analysis.ipynb
+```
+
+## 🎯 What This Project Demonstrates
+
+This project demonstrates practical skills in:
+
+* Data loading and inspection
+* Data cleaning and preprocessing
+* Exploratory Data Analysis
+* Statistical correlation analysis
+* Data visualization
+* Aggregation and grouping
+* Business-oriented interpretation
+* Interactive dashboard development
+* Modular Python development
+* Git and GitHub workflow
+* Project documentation
+
+---
+
+## 📄 Requirements
+
+Project dependencies are listed in:
+
+```text
+requirements.txt
+```
+
+Install them with:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+<p align="center">
+  🎬 <strong>Movie Ratings Analysis Dashboard</strong>
+  <br>
+  Built with Python • Pandas • Visualization • Streamlit
+</p>
